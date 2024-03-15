@@ -17,10 +17,14 @@ if (!empty($_POST)) {
         $error['coment'] = 'blank';
     }
 
+    if ($_POST['subject'] == "") {
+        $error['subject'] = 'blank';
+    }
+
     if (empty($error)) {
         try {
 
-            $statement = $pdo->prepare('INSERT INTO comments (name, mail, coment, subject) VALUES (:name, :mail, :coment, subject)');
+            $statement = $pdo->prepare('INSERT INTO comments (name, mail, coment, subject) VALUES (:name, :mail, :coment, :subject)');
             $statement->execute(array(
                 ':name' => $_POST['name'],
                 ':mail' => $_POST['mail'],
@@ -98,7 +102,7 @@ if (!empty($_POST)) {
                 <p class="error">*コメントくれへんなんて寂しいわ～</p>
             <?php endif; ?>
             宛先：<br />
-            <select name="subject" id="recipient">
+            <select name="subject" id="subject">
                 <option value="hashimoto">橋本</option>
                 <option value="segi">瀬木</option>
             </select><br><br>
