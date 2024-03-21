@@ -103,8 +103,8 @@ if (!empty($_POST)) {
             <?php endif; ?>
             宛先：<br />
             <select name="subject" id="subject">
-                <option value="hashimoto">橋本</option>
-                <option value="segi">瀬木</option>
+                <option value="橋本">橋本</option>
+                <option value="瀬木">瀬木</option>
                 <?php if (isset($error['subject']) && ($error['subject'] == "blank")) : ?>
                     <p class="error">*誰宛てに送るん？</p>
                 <?php endif; ?>
