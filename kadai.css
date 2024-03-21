@@ -42,6 +42,21 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+
+.segi1 {
+    display: inline-block;
+    margin-left: 35%;
+    text-align: center;
+}
+.segi2 {
+    display: inline-block;
+    margin-left: 30%;
+    text-align: center;
+}
+ul {
+    text-align: left;
+}
+
 .self {
     flex: 1;
     padding: 50px;
